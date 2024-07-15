@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Highlight</title>
+    
+    <!-- Add the evo-calendar.css for styling -->
+    <link rel="stylesheet" type="text/css" href="assets/css/evo-calendar.css"/>
+
+<link rel="stylesheet" type="text/css" href="assets/css/evo-calendar.orange-coral.css"/>
+
+
+<link rel="stylesheet" href="assets/css/style.css">
+   
+</head>
+<body>
+    <div class="hero">
+
+        <div id="calendar"></div>
+
+
+
+    </div>
+    
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   <!-- Add jQuery library (required) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+<!-- Add the evo-calendar.js for.. obviously, functionality! -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="assets/js/evo-calendar.js"></script>
+
+
+
+<script>
+    $(document).ready(function() {
+    $('#calendar').evoCalendar({
+        calendarEvents: [
+      {
+        id: 'event1', // Event's ID (required)
+        name: "New Year", // Event name (required)
+        date: "Augest/1/2024", // Event date (required)
+        type: "holiday", // Event type (required)           
+        everyYear: true // Same event every year (optional)
+      },
+      {
+        name: "Vacation Leave",
+        badge: "02/13 - 02/15", // Event badge (optional)
+        date: ["July/13/2024", "July/15/2024"], // Date range
+        description: "Vacation leave for 3 days.", // Event description (optional)
+        type: "event",
+        color: "#63d867" // Event custom color (optional)
+      },
+      {
+        name: "holiday for any reason",
+        badge: "02/13 - 02/15", // Event badge (optional)
+        date: ["July/1/2024", "July/19/2024"], // Date range
+        description: "**********************************.", // Event description (optional)
+        type: "event",
+        color: "#63d867" // Event custom color (optional)
+      }
+    ]
+    })
+});
+</script>
+
+
+</body>
+</html>
